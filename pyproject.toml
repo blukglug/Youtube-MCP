@@ -1,0 +1,27 @@
+[project]
+name = "mcp-youtube"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "async-timeout>=4.0.3",
+    "grpcio-status>=1.71.0",
+    "lancedb>=0.3.3",
+    "langchain>=0.3.19",
+    "langchain-community>=0.0.10",
+    "langchain-google-genai>=0.0.5",
+    "langchain-text-splitters>=0.3.7",
+    "langsmith>=0.3.16",
+    "mcp>=1.2.0",
+    "multidict>=6.1.0",
+    "numpy>=2.2.3",
+    "pandas>=2.2.3",
+    "protobuf>=5.29.3",
+    "pydantic-core>=2.27.2",
+    "python-dotenv>=1.0.0",
+    "pytube2>=15.0.12",
+    "youtube-search>=2.1.2",
+    "youtube-transcript-api==0.6.3",
+]

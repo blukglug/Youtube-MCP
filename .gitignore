@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+youtube_db/
+source/
+.env
+mcp_server_tavily/
+data/
+Resources/
+.cursorignore
+testing/
